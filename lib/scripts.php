@@ -13,6 +13,11 @@
 function roots_scripts() {
   wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '9880649384aea9f1ee166331c0a30daa');
 
+  // Load style.css from child theme
+  if (is_child_theme()) {
+    wp_enqueue_style('regenrek_child', get_stylesheet_uri(), false, null);
+  }
+
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
   // It's kept in the header instead of footer to avoid conflicts with plugins.
