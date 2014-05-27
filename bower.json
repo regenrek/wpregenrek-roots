@@ -1,0 +1,22 @@
+{
+  "name": "wpregenrek-roots",
+  "version": "1.2.4",
+  "homepage": "https://github.com/kkern/wpregenrek-bedrock",
+  "authors": [
+    "regenrek"
+  ],
+  "description": "Bower package file for roots",
+  "main": "assets/css/main.min.css",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "4.1.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ]
+}
