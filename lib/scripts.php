@@ -11,11 +11,12 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '9880649384aea9f1ee166331c0a30daa');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'f73c66c2b8adf997c47a76610ccbb9cf');
 
   // Load style.css from child theme
   if (is_child_theme()) {
-    wp_enqueue_style('regenrek_child', get_stylesheet_uri(), false, null);
+    wp_enqueue_style('regenrek_child_style', get_stylesheet_uri(), false, null);
+    wp_enqueue_style('regenrek_child_app', get_stylesheet_directory_uri() . '/assets/css/child.min.css', false, null);
   }
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
