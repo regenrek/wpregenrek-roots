@@ -16,7 +16,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'assets/css/main.min.css': [
-            'assets/less/app.less'
+            'assets/less/app.less',
+            'assets/bower_components/font-awesome/less/font-awesome.less'
           ]
         },
         options: {
@@ -98,8 +99,25 @@ module.exports = function(grunt) {
         'assets/css/main.min.css',
         'assets/js/scripts.min.js'
       ]
+    },
+    copy: {
+      dist: {
+        files : [{
+          expand: true,
+          cwd: 'assets/components/font-awesome/fonts',
+          src: '*',
+          dest: 'assets/fonts'
+        }]
+      }
+    },
+    hub : {
+      child1 : {
+        src: ['../wpregenrek-child/Gruntfile.js'],
+        tasks: ['build']
+      }
     }
   });
+
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -108,16 +126,25 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-hub');
 
   // Register tasks
   grunt.registerTask('default', [
+    'copy',
     'clean',
     'less',
     'uglify',
     'version'
   ]);
+  
   grunt.registerTask('dev', [
     'watch'
   ]);
 
+  
+  grunt.registerTask('buildchild', [
+    'hub:child1'
+    //'hub:child2'
+  ]);
 };
