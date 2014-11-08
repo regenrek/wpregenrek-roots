@@ -1,22 +1,22 @@
 {
   "name": "wpregenrek-roots",
-  "version": "1.2.4",
-  "homepage": "https://github.com/kkern/wpregenrek-bedrock",
+  "version": "7.0.2",
+  "homepage": "http://roots.io",
   "authors": [
-    "regenrek"
+    "Ben Word <ben@benword.com>",
+	"Kevin Kernegger <hello@regenrek.at>"
   ],
-  "description": "Bower package file for roots",
-  "main": "assets/css/main.min.css",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "font-awesome": "4.1.0"
-  },
   "ignore": [
     "**/.*",
     "node_modules",
-    "assets/bower_components",
-    "test",
-    "tests"
-  ]
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "jquery": "1.11.1",
+    "bootstrap": "3.3.0",
+    "respond": "1.4.2"
+  }
 }
