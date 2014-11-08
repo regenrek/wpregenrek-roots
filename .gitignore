@@ -11,3 +11,4 @@ assets/fonts
 !assets/fonts/.gitkeep
 
 .DS_Store
+.idea
