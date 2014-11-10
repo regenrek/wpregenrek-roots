@@ -3,6 +3,13 @@
 This is a fork of [https://github.com/roots/roots](https://github.com/roots/roots)
 
 
+
+## Bower Packages
+
+* FontAwesome
+
+
+
 ## Support & Documentation
 
 Original Documentation: [roots Theme](http://roots.io/)
