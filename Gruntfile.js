@@ -38,8 +38,7 @@ module.exports = function(grunt) {
       dev: {
         files: {
           'assets/css/main.min.css': [
-            'assets/less/main.less',
-            'assets/vendor/font-awesome/less/font-awesome.less'
+            'assets/less/main.less'
           ]
         },
         options: {
@@ -155,28 +154,8 @@ module.exports = function(grunt) {
           '*.php'
         ]
       }
-    },
-    copy: {
-      dist: {
-        files : [{
-          expand: true,
-          cwd: 'assets/components/font-awesome/fonts',
-          src: '*',
-          dest: 'assets/fonts'
-        }]
-      }
-    },
-    hub : {
-      child1 : {
-        src: ['../wpregenrek-child/Gruntfile.js'],
-        tasks: ['build']
-      }
     }
   });
-
-
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-hub');
 
   // Register tasks
   grunt.registerTask('default', [
@@ -196,9 +175,5 @@ module.exports = function(grunt) {
     'uglify',
     'modernizr',
     'version'
-  ]);
-  
-  grunt.registerTask('buildchild', [
-    'hub:child1'
-  ]);
+  ]);  
 };

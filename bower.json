@@ -3,8 +3,7 @@
   "version": "7.0.2",
   "homepage": "http://roots.io",
   "authors": [
-    "Ben Word <ben@benword.com>",
-	"Kevin Kernegger <hello@regenrek.at>"
+    "Ben Word <ben@benword.com>"
   ],
   "license": "MIT",
   "private": true,
